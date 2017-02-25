@@ -8,7 +8,13 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    redirect_to @post
+    if @post.save
+      flash[:notice] = "Thanks for posting"
+      redirect_to @post
+    else
+      flash[:notice] = "No image selected"
+      render :new
+    end
   end
 
   def show

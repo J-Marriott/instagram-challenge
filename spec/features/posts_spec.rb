@@ -10,5 +10,13 @@ feature 'Posts' do
     click_button 'Create Post'
     expect(page).to have_content('#BirdWatching')
     expect(page).to have_css("img[src*='kingfisher.jpg']")
+    expect(page).to have_content("Thanks for posting")
+  end
+  scenario 'User cannot create post without photo' do
+    visit '/'
+    click_link 'New Post'
+    fill_in 'Description', with: 'No image attached'
+    click_button 'Create Post'
+    expect(page).to have_content("No image selected")
   end
 end
