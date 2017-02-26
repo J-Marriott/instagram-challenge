@@ -35,6 +35,7 @@ gem 'aws-sdk', '~> 2.0'
 gem 'figaro'
 gem 'slim-rails'
 gem 'devise'
+gem 'omniauth'
 gem 'omniauth-facebook'
 
 # Use Capistrano for deployment
