@@ -22,6 +22,7 @@ feature 'User can sign in and out' do
     before do
       visit('/')
       click_link('Sign up')
+      fill_in('Name', with: 'Joe Bloggs')
       fill_in('Email', with: 'joe@example.com')
       fill_in('Password', with: 'shoobydooby')
       fill_in('Password confirmation', with: 'shoobydooby')
@@ -40,5 +41,5 @@ feature 'User can sign in and out' do
     end
 
   end
-  
+
 end
