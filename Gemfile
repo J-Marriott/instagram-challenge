@@ -34,6 +34,8 @@ gem 'paperclip', '~> 5.0'
 gem 'aws-sdk', '~> 2.0'
 gem 'figaro'
 gem 'slim-rails'
+gem 'devise'
+gem 'omniauth-facebook'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
